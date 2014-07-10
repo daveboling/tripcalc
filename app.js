@@ -25,12 +25,11 @@ fullTankCost = tankSize * gasPrice;
 
 //What is the true MPG of the vehicle?
 //Are we less than our offset?
-if (speed > speedThreshold && vehicleType === 'truck'){ trueMpg = mpg - ((speed - speedThreshold) * 3); console.log(trueMpg); }
-else if (speed > speedThreshold && vehicleType === 'car'){ trueMpg = mpg - (speed - speedThreshold); console.log(trueMpg);}
+if (speed > speedThreshold && vehicleType === 'truck'){ trueMpg = mpg - ((speed - speedThreshold) * 3); }
+else if (speed > speedThreshold && vehicleType === 'car'){ trueMpg = mpg - (speed - speedThreshold); }
 else { trueMpg = mpg; }
 
 //Check to see how low our trueMpg is. If it's too low, we have to set it to the speedOffset.
-console.log(trueMpg);
 if (trueMpg <= speedOffset){ trueMpg = speedOffset;}
 
 //Number of miles per tank of gas
