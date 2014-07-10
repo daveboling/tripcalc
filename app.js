@@ -36,8 +36,8 @@ if (trueMpg <= speedOffset){ trueMpg = speedOffset;}
 var milesPerTank = trueMpg * tankSize;
 
 //Total Trip Cost
-var totalTripCost = (Math.round((milesToGo/trueMpg*100)/100) * gasPrice);
-var totalFillUps = (Math.round((totalTripCost/fullTankCost) * 10 ) / 10);
+var totalTripCost = Math.ceil(milesToGo/trueMpg) * gasPrice;
+var totalFillUps = Math.ceil(totalTripCost/fullTankCost);
 
 //Output all calculations
 console.log("True MPG " + trueMpg);
